@@ -14,22 +14,12 @@ public:
     PcUtm2MgrsConverter();
 
     enum class MGRSPrecision {
-        _10_KIRO_METER = 1,
-        _1_KIRO_METER = 2,
-        _100_METER = 3,
-        _10_METER = 4,
         _1_METER = 5,
-        _100_MIllI_METER = 6,
-        _10_MIllI_METER = 7,
-        _1_MIllI_METER = 8,
         _100MICRO_METER = 9,
     };
     enum class CoordinateSystem {
         UTM = 0,
         MGRS = 1,
-        PLANE = 2,
-        LOCAL_CARTESIAN_WGS84 = 3,
-        LOCAL_CARTESIAN_UTM = 4
     };
     struct GNSSStat
     {
@@ -60,8 +50,7 @@ public:
         double altitude;
     };
 
-     GNSSStat convertUTM2MGRS(GNSSStat gnss_stat_utm, const MGRSPrecision precision, const rclcpp::Logger &logger);
-
+    GNSSStat convertUTM2MGRS(GNSSStat gnss_stat_utm, const MGRSPrecision precision, const rclcpp::Logger &logger);
 };
 
 #endif  // PC_UTM_TO_MGRS_CONVERTER__PC_UTM_TO_MGRS_CONVERTER_HPP_

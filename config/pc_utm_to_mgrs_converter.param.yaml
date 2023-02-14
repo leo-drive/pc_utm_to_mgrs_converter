@@ -1,0 +1,10 @@
+/**:
+  ros__parameters:
+      # Northing of local origin
+      Northing: 4520550.0
+
+      # Easting of local origin
+      Easting: 698891.0
+
+      # Elipsoid Height of local origin
+      ElipsoidHeight: 47.62

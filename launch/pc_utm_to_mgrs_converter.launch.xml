@@ -1,0 +1,13 @@
+<launch>
+
+    <arg name="param_file" default="$(find-pkg-share pc_utm_to_mgrs_converter)/config/pc_utm_to_mgrs_converter.param.yaml"/>
+    <arg name="input_file_path" default="/home/melike/projects/autoware_data/gebze_pospac_map/pointcloud_map.pcd"/>
+    <arg name="output_file_path" default="/home/melike/projects/autoware_data/gebze_pospac_map/pointcloud_map_mgrs_orto.pcd"/>
+
+    <node pkg="pc_utm_to_mgrs_converter" exec="pc_utm_to_mgrs_converter" name="pc_utm_to_mgrs_converter" output="screen">
+        <param name="input_file_path" value="$(var input_file_path)"/>
+        <param name="output_file_path" value="$(var output_file_path)"/>
+        <param from="$(var param_file)"/>
+    </node>
+
+</launch>
